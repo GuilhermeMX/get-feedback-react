@@ -9,12 +9,11 @@ datasource db {
 
 //listing types of feedbacks
 model Feedback {
-  id String @id
+  id String @id @default(uuid())
 
-  type String
-  comment String
+  type       String
+  comment    String
   screenshot String?
-
 
   @@map("feedbacks")
 }
